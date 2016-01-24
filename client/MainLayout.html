@@ -1,0 +1,59 @@
+<template name="MainLayout">
+
+<div class="ui sidebar inverted vertical menu">
+    <a class="item">
+      1
+    </a>
+    <a class="item">
+      2
+    </a>
+    <a class="item">
+      3
+    </a>
+</div>
+
+{{> sAlert }}
+
+<div class="" id="wholebody">
+
+<div style="position: absolute; top: 106px;">
+<a href="#" onclick="javascript:$('.ui.sidebar').sidebar('toggle');">
+<div class="ui sticky black big launch right attached bound top button">
+<i class="content icon"></i>
+</div>
+</a>
+</div>
+
+<div id="everythingelse" style="margin-left:8%;">
+
+<div class="ui secondary inverted menu">
+  <a href="/" class="active item">
+    Home
+  </a>
+  <a href="/contribute/123/" class="item">
+    Contribute
+  </a>
+  <a class="item">
+    Categories
+  </a>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <a class="ui item">
+      {{> loginButtons }}
+    </a>
+  </div>
+</div>
+<div id="maincontent">
+  {{> Template.dynamic template=main }}
+</div>
+
+</div> <!-- end everythingelse div ie everything except sticky -->
+</div> <!-- end enclosing wholebody div -->
+
+</template>
+

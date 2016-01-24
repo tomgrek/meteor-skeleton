@@ -1,0 +1,26 @@
+<template name="view">
+
+{{#if Template.subscriptionsReady}}
+
+{{#with item}}
+
+<div class="ui breadcrumb">
+  <a href="#" onclick="history.go(-1);"><i class="arrow left icon"></i></a>
+  <a href="/" class="section">Home</a>
+  <i class="right angle icon divider"></i>
+  <a class="section">{{name}}</a>
+  <i class="right angle icon divider"></i>
+  <a class="section">{{name}}</a>
+</div>
+
+<h1 id="myh1">{{name}}</h1>
+
+{{/with}}
+
+{{else}}
+LOADING
+{{/if}}
+
+
+</template>
+

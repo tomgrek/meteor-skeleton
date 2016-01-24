@@ -1,0 +1,48 @@
+<template name="home">
+
+<div id="maincontainerforfadein" style="display:none;">
+
+<h1 id="myh1">Project {{ >emojione ':beers:'}} </h1>
+
+{{#masonryContainer id="cards-container" columnWidth=90 transitionDuration="0s"}}
+{{#each cards}}
+	{{#masonryElement "cards-container"}}
+	{{> card}}
+	{{/masonryElement}}
+{{/each}}
+{{/masonryContainer}}
+
+</div> <!-- end main container fade in div -->
+
+<!-- How to show alerts: -->
+<script>
+sAlert.error('Your message', {});
+setTimeout(function() {
+$('#maincontainerforfadein').fadeIn('fast');
+}, 200);
+</script>
+<!-- -->
+</template>
+
+<!-- card template -->
+
+<template name="card">
+<a href="/{{itemID}}">
+<div class="ui card" id="{{itemID}}">
+
+<div class="image">
+	<img src="http://placehold.it/290x170">
+</div>
+
+<div class="content">
+
+<a class="header">{{name}}</a>
+
+<div class="meta">
+	{{miniText}}
+</div>
+
+</div>
+</div>
+</a>
+</template>

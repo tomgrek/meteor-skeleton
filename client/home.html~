@@ -2,7 +2,19 @@
 
 <div id="maincontainerforfadein" style="display:none;">
 
-<h1 id="myh1">Project {{ >emojione ':beers:'}} </h1>
+<h1 id="myh1">Project {{ >emojione ':beers:'}}</h1>
+
+{{#if city }}
+<h1>{{city}}</h1>
+{{else}}
+<h1>LOADING</h1>
+{{/if}}
+
+{{#if reactiveCity }}
+<h1>{{reactiveCity}}</h1>
+{{else}}
+<h1>LOADING</h1>
+{{/if}}
 
 {{#masonryContainer id="cards-container" columnWidth=90 transitionDuration="0s"}}
 {{#each cards}}
@@ -31,7 +43,7 @@ $('#maincontainerforfadein').fadeIn('fast');
 <div class="ui card" id="{{itemID}}">
 
 <div class="image">
-	<img src="/images/btlogo.png">
+	<img src="http://placehold.it/290x170">
 </div>
 
 <div class="content">

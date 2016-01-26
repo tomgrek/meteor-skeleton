@@ -2,7 +2,13 @@
 
 <div id="maincontainerforfadein" style="display:none;">
 
-<h1 id="myh1">Project {{ >emojione ':beers:'}} </h1>
+<h1 id="myh1">Project {{ >emojione ':beers:'}}</h1>
+
+{{#if city }}
+<h1>{{city}}</h1>
+{{else}}
+<h1>LOADING</h1>
+{{/if}}
 
 {{#masonryContainer id="cards-container" columnWidth=90 transitionDuration="0s"}}
 {{#each cards}}

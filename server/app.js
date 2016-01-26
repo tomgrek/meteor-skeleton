@@ -8,6 +8,23 @@ Items.insert({
   miniText: "Some text extract"
 });*/
 
+var geo = new GeoCoder({geocoderProvider:"google", httpAdapter:"https",apiKey:"APIKEY"});
+
+Meteor.methods({
+	'city': function(latlng) { 
+		if (latlng)
+		{		
+		location= geo.reverse(latlng.lat,latlng.lng);
+		if (location)
+			return location;
+		else
+			return {city:'Portland'};
+		}
+		else
+			return {city:'Loading'};
+	}
+});
+
 Meteor.publish('singleItem', function(item_id) {	
 	return Items.find({itemID:item_id});
 });
@@ -17,4 +34,5 @@ Meteor.publish('allItems', function() {
 });
 
 Meteor.startup(function () {
+
 });

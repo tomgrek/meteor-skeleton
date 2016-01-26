@@ -33,4 +33,10 @@ simple Mongo collection set up and demo code for insert/find
 
 Flow Router set up and configured, with 2 demo pages each fetching different items from the database.
 
+Geolocation and reverse geocoding (i.e. get and display user's city). Not using the official mdg package as it doesn't allow callbacks. Just using HTML5 geolocation.
+
+Reactive methods (simple:reactive-methods). Enables data generated server-side to be displayed in templates.
+
+
+
 Uses Blaze layout.
